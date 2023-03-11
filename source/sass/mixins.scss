@@ -1,3 +1,61 @@
+@import "./variables.scss";
+
+@mixin main-title-dekstop {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  color: $color-alice-blue;
+}
+
+@mixin main-title-tablet {
+  font-size: 50px;
+  line-height: 61px;
+}
+
+@mixin main-title-mobile {
+  font-size: 36px;
+  line-height: 125%;
+}
+
+@mixin section-title-desktop {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  color: $color-tangaroa;
+}
+
+@mixin section-title-tablet {
+  font-size: 26px;
+}
+
+@mixin section-title-mobile {
+  font-size: 24px;
+}
+
+@mixin header-links-dekstop {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-alice-blue;
+}
+
+@mixin header-links-tablet {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin header-links-mobile {
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-tangaroa;
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
