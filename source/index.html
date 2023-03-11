@@ -1,21 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="icon" href="favicon/favicon.ico">
-    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Описание проекта">
+  <title>ProjectName</title>
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__wrapper">
+        <a class="footer__logo" href="#">
+          <img class="footer__logo-image" src="img/svg/logo-site.svg" width="70" height="38" alt="Логотип сайта">
+        </a>
+        <ul class="footer__navigation-list">
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#advantages">
+              Преимущества
+            </a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#">
+              Направления
+            </a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#cruises">
+              Ближайшие круизы
+            </a>
+          </li>
+          <li class="footer__navigation-item">
+            <a class="footer__navigation-link" href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://ok.ru" aria-label="Одноклассники">
+            <svg class="footer__social-logo" width="20" height="20">
+              <use href="img/sprite.svg#ok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://dzen.ru/" aria-label="Яндекс Дзен">
+            <svg class="footer__social-logo" width="20" height="20">
+              <use href="img/sprite.svg#dzen"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="https://www.reddit.com/" aria-label="Reddit">
+            <svg class="footer__social-logo" width="20" height="20">
+              <use href="img/sprite.svg#reddit"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>

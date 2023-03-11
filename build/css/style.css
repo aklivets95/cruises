@@ -1305,6 +1305,82 @@ button,
   color: #15ab07;
 }
 
+.footer {
+  background-color: #011C40;
+}
+
+.footer__container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 50px 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.footer__navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 33px;
+  max-width: 800px;
+}
+
+.footer__navigation-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__navigation-link {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f9fbfd;
+}
+
+.footer__social-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 27px;
+  max-width: 120px;
+}
+
+.footer__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1356,6 +1432,39 @@ button,
   .container {
     padding: 0 24px;
   }
+
+  .footer__container {
+    padding: 50px 45px;
+  }
+
+  .footer__wrapper {
+    gap: 25px;
+  }
+
+  .footer__navigation-list {
+    gap: 23px;
+    max-width: 440px;
+  }
+
+  .footer__navigation-link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__social-list {
+    gap: 22px;
+    max-width: 92px;
+  }
+
+  .footer__logo-image {
+    width: 38px;
+    height: 20px;
+  }
+
+  .footer__social-logo {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1374,6 +1483,35 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .footer__container {
+    padding: 40px 15px;
+    display: block;
+  }
+
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footer__navigation-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__logo-image {
+    width: 42px;
+    height: 22px;
   }
 }
 
