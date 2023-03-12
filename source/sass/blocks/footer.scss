@@ -75,6 +75,14 @@
     font-size: 12px;
     line-height: 15px;
   }
+
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include focus {
+    outline: 1px solid $color-alice-blue;
+  }
 }
 
 .footer__social-list {
@@ -94,6 +102,24 @@
 
 .footer__social-link {
   display: flex;
+
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include focus {
+    outline: 1px solid $color-alice-blue;
+  }
+}
+
+.footer__logo {
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include focus {
+    outline: 1px solid $color-alice-blue;
+  }
 }
 
 .footer__logo-image {
