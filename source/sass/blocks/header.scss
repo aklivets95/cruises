@@ -11,6 +11,7 @@
   left: 0;
   right: 0;
   top: 35px;
+  z-index: 1;
 
   @include vp-1023 {
     top: 30px;

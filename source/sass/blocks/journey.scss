@@ -1,0 +1,71 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.journey {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 120px 10px 145px;
+  display: flex;
+  align-items: center;
+  gap: 88px;
+
+  @include vp-1023 {
+    padding: 100px 45px;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  @include vp-767 {
+    display: block;
+    padding: 65px 15px 85px;
+  }
+}
+
+.journey__wrapper-image {
+  flex-shrink: 0;
+}
+
+.journey__photo {
+  @include vp-1023 {
+    width: 324px;
+    height: auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.journey__container {
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
+}
+
+.journey__container h2 {
+  margin: 0 0 40px;
+  @include section-title-desktop;
+
+  @include vp-1023 {
+    @include section-title-tablet;
+    max-width: 225px;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    @include section-title-mobile;
+  }
+}
+
+.journey__container p {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-tangaroa;
+}
