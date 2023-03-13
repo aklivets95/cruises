@@ -49,9 +49,11 @@
     width: 24px;
     height: 12px;
     background-color: transparent;
+
     &--open {
       display: flex;
     }
+
     &--close {
       display: none;
     }
@@ -149,9 +151,7 @@
 }
 
 .is-open {
-
   @include vp-767 {
-
     .header__background {
       position: fixed;
       top: 0;
@@ -189,9 +189,11 @@
       width: 13px;
       height: 13px;
       z-index: 2;
+
       &--open {
         display: none;
       }
+
       &--close {
         display: flex;
       }

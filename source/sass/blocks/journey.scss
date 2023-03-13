@@ -47,6 +47,7 @@
 
 .journey__container h2 {
   margin: 0 0 40px;
+
   @include section-title-desktop;
 
   @include vp-1023 {
