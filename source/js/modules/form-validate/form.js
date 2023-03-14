@@ -2,6 +2,8 @@ import {Validator} from './validator';
 import {callbacks} from './callback';
 import {initPhoneInput} from './init-phone-input';
 
+const myForm = document.querySelector('.form');
+
 export class Form {
   constructor() {
     this._validator = new Validator();

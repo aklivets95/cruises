@@ -386,14 +386,6 @@ template {
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
-  font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
-}
-
-@font-face {
-  font-style: normal;
   font-weight: 500;
   font-family: "Montserrat";
   font-display: swap;
@@ -1319,7 +1311,7 @@ button,
 }
 
 .footer {
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .footer__container {
@@ -1408,7 +1400,7 @@ button,
 
 .example {
   height: 600px;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .header {
@@ -1481,9 +1473,9 @@ button,
 .promo {
   min-height: 650px;
   position: relative;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #011C40;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #011c40;
   z-index: -1;
 }
 
@@ -1549,7 +1541,7 @@ button,
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
-  color: #011C40;
+  color: #011c40;
 }
 
 .journey__container p {
@@ -1559,7 +1551,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  color: #011C40;
+  color: #011c40;
 }
 
 .advantages {
@@ -1591,7 +1583,7 @@ button,
   font-weight: 600;
   font-size: 28px;
   line-height: 150%;
-  color: #011C40;
+  color: #011c40;
 }
 
 .advantages__list {
@@ -1624,7 +1616,7 @@ button,
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
-  color: #011C40;
+  color: #011c40;
 }
 
 .advantages__item p {
@@ -1634,7 +1626,337 @@ button,
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  color: #011C40;
+  color: #011c40;
+}
+
+.cruises__container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 85px 25px 120px;
+}
+
+.cruises__container h2 {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 150%;
+  color: #011c40;
+  margin: 0 0 49px;
+  text-align: center;
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.cruises__item {
+  position: relative;
+  background-color: #011c40;
+}
+
+.cruises__item:hover .cruises__item-background {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cruises__item.focus-visible:focus .cruises__item-background {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cruises__item-background {
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.cruises__item-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.cruises__item-background p {
+  position: absolute;
+  bottom: 28px;
+  left: 36px;
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.cruises__item-content {
+  position: relative;
+  padding: 29px 25px 75px;
+  height: 100%;
+  background-color: #011c40;
+}
+
+.cruises__item-content:focus-within {
+  z-index: 2;
+}
+
+.cruises__item-content p {
+  margin: 0 0 14px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.cruises__description-list {
+  margin: 0;
+}
+
+.cruises__description-list dt {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: #f9fbfd;
+  margin-bottom: 1px;
+}
+
+.cruises__description-list dd {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #d8d8d9;
+}
+
+.cruises__description-list dd:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.cruises__item-content-link {
+  position: absolute;
+  bottom: 35px;
+  display: block;
+  min-width: 210px;
+  background-color: #f9fbfd;
+  color: #011c40;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 9px 5px 10px;
+  text-align: center;
+}
+
+.booking {
+  position: relative;
+  min-height: 555px;
+}
+
+.booking__background-image {
+  position: absolute;
+  z-index: -1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.booking__container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 50px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 144px;
+}
+
+.booking__text-wrapper {
+  max-width: 493px;
+}
+
+.booking__text-wrapper h2 {
+  margin: 0 0 30px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: #011c40;
+}
+
+.booking__text-wrapper p {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #011c40;
+  max-width: 355px;
+  margin: 0;
+}
+
+.booking__form-wrapper {
+  background-color: #011c40;
+  padding: 50px;
+  max-width: 403px;
+}
+
+.booking__form-wrapper p {
+  margin: 0 0 35px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #f9fbfd;
+}
+
+.form__input {
+  margin-bottom: 20px;
+}
+
+.form__input span {
+  color: #ff4646;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+}
+
+.form__input-email {
+  margin-bottom: 20px;
+}
+
+.form__input input {
+  width: 100%;
+  padding: 11px 10px 11px 16px;
+  border: none;
+  background-color: #f9fbfd;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.form__input input.focus-visible:focus {
+  outline: 2px solid #b1d9fa;
+}
+
+.form__checkbox label {
+  position: relative;
+  cursor: pointer;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 130%;
+  color: #f9fbfd;
+  display: block;
+  padding: 5px 0 5px 23px;
+}
+
+.form__checkbox label.focus-visible:focus {
+  outline: 1px solid #f9fbfd;
+}
+
+.form__checkbox label.focus-visible:active {
+  opacity: 0.3;
+}
+
+.form__checkbox div {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: #f9fbfd;
+}
+
+.form__checkbox div::after {
+  content: "";
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2.5L5.28571 7L11 1' stroke='%23101A56'/%3E%3C/svg%3E%0A");
+  width: 12px;
+  height: 8px;
+  background-repeat: no-repeat;
+  left: 3px;
+  top: 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.form__checkbox input[type=checkbox]:checked + div::after {
+  opacity: 1;
+}
+
+.form__checkbox {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.form__checkbox input[type=checkbox]:focus + div {
+  outline: 2px solid #b1d9fa;
+  opacity: 0.7;
+}
+
+.form__submit {
+  width: 100%;
+  padding: 11px 5px 13px;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.form__submit.focus-visible:focus {
+  outline: 2px solid #b1d9fa;
+}
+
+.form__submit.focus-visible:active {
+  opacity: 0.3;
+}
+
+.form__checkbox span {
+  color: #ff4646;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
 }
 
 /* @mixin hover-focus {
@@ -1826,6 +2148,61 @@ button,
   .advantages__item svg {
     margin-bottom: 18px;
   }
+
+  .cruises__container {
+    padding: 90px 60px;
+  }
+
+  .cruises__container h2 {
+    font-size: 26px;
+    margin-bottom: 50px;
+  }
+
+  .cruises__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cruises__item-content {
+    padding: 29px 35px 101px;
+  }
+
+  .cruises__item-content p {
+    margin-bottom: 13px;
+  }
+
+  .cruises__item-content-link {
+    left: 35px;
+    right: 35px;
+  }
+
+  .booking {
+    min-height: 805px;
+  }
+
+  .booking__container {
+    display: block;
+    padding: 100px 45px;
+  }
+
+  .booking__text-wrapper {
+    max-width: none;
+  }
+
+  .booking__text-wrapper h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 25px;
+  }
+
+  .booking__text-wrapper p {
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  .booking__form-wrapper {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1936,7 +2313,7 @@ button,
   .header__navigation-link {
     font-size: 18px;
     line-height: 22px;
-    color: #011C40;
+    color: #011c40;
     display: block;
     padding: 10px;
   }
@@ -1963,7 +2340,7 @@ button,
   }
 
   .is-open .header__logo-image {
-    fill: #011C40;
+    fill: #011c40;
   }
 
   .is-open .header__navigation {
@@ -2073,6 +2450,68 @@ button,
     max-width: 170px;
     margin-bottom: 6px;
   }
+
+  .cruises__container {
+    padding: 65px 25px;
+  }
+
+  .cruises__container h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .cruises__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .cruises__item-content {
+    padding: 35px 25px 100px;
+  }
+
+  .cruises__item-content-link {
+    left: 25px;
+    right: 25px;
+  }
+
+  .booking {
+    min-height: 760px;
+  }
+
+  .booking__container {
+    padding: 65px 15px;
+  }
+
+  .booking__text-wrapper h2 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  .booking__text-wrapper p {
+    font-size: 16px;
+    line-height: 140%;
+    margin: 0 auto 40px;
+    max-width: 257px;
+  }
+
+  .booking__form-wrapper {
+    padding: 40px 30px;
+  }
+
+  .booking__form-wrapper p {
+    line-height: 140%;
+    text-align: center;
+  }
+
+  .form__checkbox label {
+    line-height: 120%;
+    padding: 0 0 0 28px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2168,6 +2607,19 @@ button,
   }
 
   .header__logo:hover:not(.focus-visible) {
+    opacity: 0.5;
+  }
+
+  .cruises__item:hover:not(.focus-visible) .cruises__item-background {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .form__checkbox label:hover:not(.focus-visible) {
+    opacity: 0.5;
+  }
+
+  .form__submit:hover:not(.focus-visible) {
     opacity: 0.5;
   }
 }

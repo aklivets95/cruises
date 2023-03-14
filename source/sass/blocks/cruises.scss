@@ -1,0 +1,194 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.cruises__container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 85px 25px 120px;
+
+  @include vp-1023 {
+    padding: 90px 60px;
+  }
+
+  @include vp-767 {
+    padding: 65px 25px;
+  }
+}
+
+.cruises__container h2 {
+  @include section-title-desktop;
+  margin: 0 0 49px;
+  text-align: center;
+
+  @include vp-1023 {
+    @include section-title-tablet;
+    margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    @include section-title-mobile;
+    margin-bottom: 40px;
+  }
+}
+
+.cruises__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cruises__item {
+  position: relative;
+  background-color: $color-tangaroa;
+
+  &:hover {
+    .cruises__item-background {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @include hover {
+    .cruises__item-background {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @include focus {
+    .cruises__item-background {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+.cruises__item-background {
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.cruises__item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cruises__item-background p {
+  position: absolute;
+  bottom: 28px;
+  left: 36px;
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-alice-blue;
+}
+
+.cruises__item-content {
+  position: relative;
+  padding: 29px 25px 75px;
+  height: 100%;
+  background-color: $color-tangaroa;
+
+  &:focus-within {
+    z-index: 2;
+  }
+
+  @include vp-1023 {
+    padding: 29px 35px 101px;
+  }
+
+  @include vp-767 {
+    padding: 35px 25px 100px;
+  }
+}
+
+.cruises__item-content p {
+  margin: 0 0 14px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-alice-blue;
+
+  @include vp-1023 {
+    margin-bottom: 13px;
+  }
+}
+
+.cruises__description-list {
+  margin: 0;
+}
+
+.cruises__description-list dt {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  color: $color-alice-blue;
+  margin-bottom: 1px;
+}
+
+.cruises__description-list dd {
+  margin: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: $color-quartz;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.cruises__item-content-link {
+  position: absolute;
+  bottom: 35px;
+  display: block;
+  min-width: 210px;
+  background-color: $color-alice-blue;
+  color: $color-tangaroa;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  padding: 9px 5px 10px;
+  text-align: center;
+
+  @include vp-1023 {
+    left: 35px;
+    right: 35px;
+  }
+
+  @include vp-767 {
+    left: 25px;
+    right: 25px;
+  }
+}

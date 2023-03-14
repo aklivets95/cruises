@@ -1,0 +1,123 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.booking {
+  position: relative;
+  min-height: 555px;
+
+  @include vp-1023 {
+    min-height: 805px;
+  }
+
+  @include vp-767 {
+    min-height: 760px;
+  }
+}
+
+.booking__background-image {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.booking__container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 50px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 144px;
+
+  @include vp-1023 {
+    display: block;
+    padding: 100px 45px;
+  }
+
+  @include vp-767 {
+    padding: 65px 15px;
+  }
+}
+
+.booking__text-wrapper {
+  max-width: 493px;
+
+  @include vp-1023 {
+    max-width: none;
+  }
+}
+
+.booking__text-wrapper h2 {
+  margin: 0 0 30px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  color: $color-tangaroa;
+
+  @include vp-1023 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+}
+
+.booking__text-wrapper p {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-tangaroa;
+  max-width: 355px;
+  margin: 0;
+
+  @include vp-1023 {
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 140%;
+    margin: 0 auto 40px;
+    max-width: 257px;
+  }
+}
+
+.booking__form-wrapper {
+  background-color: $color-tangaroa;
+  padding: 50px;
+  max-width: 403px;
+
+  @include vp-1023 {
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    padding: 40px 30px;
+  }
+}
+
+.booking__form-wrapper p {
+  margin: 0 0 35px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: $color-alice-blue;
+
+  @include vp-767 {
+    line-height: 140%;
+    text-align: center;
+  }
+}
