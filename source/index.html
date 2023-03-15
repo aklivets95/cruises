@@ -464,8 +464,7 @@
               data-message-base="Поле обязательно к заполнению"
               data-message-extra="Проверьте корректность заполнения поля" data-required>
               <label class="visually-hidden" for="phone">Телефон</label>
-              <input id="phone" type="tel" placeholder="Телефон" title="Только цифры, 11 цифр"
-                required>
+              <input id="phone" type="tel" placeholder="Телефон" title="Только цифры, 11 цифр" required>
             </div>
             <div class="form__input form__input-email" data-validate-type="email"
               data-message-base="Поле обязательно к заполнению" data-required>
@@ -481,6 +480,30 @@
             </div>
             <button class="form__submit" type="submit">Оставить заявку</button>
           </form>
+        </div>
+      </div>
+    </section>
+    <section class="main__contacts contacts" id="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contacts__container">
+        <iframe class="contacts__map"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A081010d589cc8574ad8b0dac15bb2bd148acda3c0b6b022fc905fb7c399870b3&amp;source=constructor"
+          width="560" height="306" frameborder="0"></iframe>
+        <div class="contacts__wrapper">
+          <p class="contacts__description">У&nbsp;вас ещё остались вопросы или сомнения?
+            Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+          <address class="contacts__address-wrapper">
+            <svg width="18" height="22">
+              <use href="img/sprite.svg#pin"></use>
+            </svg>
+            г. Санкт Петербург, ул. Большая Конюшенная, 19/8
+          </address>
+          <a class="contacts__phone-link" href="tel:88002000000">
+            <svg width="18" height="18">
+              <use href="img/sprite.svg#phone"></use>
+            </svg>
+            8-800-200-00-00
+          </a>
         </div>
       </div>
     </section>

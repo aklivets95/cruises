@@ -36,8 +36,8 @@
 
   @include vp-767 {
     padding: 0 15px;
+    }
   }
-}
 
 .header__burger-button {
   display: none;
@@ -49,6 +49,7 @@
     width: 24px;
     height: 12px;
     background-color: transparent;
+    z-index: 2;
 
     &--open {
       display: flex;
@@ -72,6 +73,7 @@
     width: 90%;
     padding: 75px 30px 30px 15px;
     transition: all 0.3s ease;
+    overflow-y: scroll;
   }
 }
 
@@ -127,6 +129,9 @@
 .header__logo {
   display: flex;
 
+  @include vp-767 {
+  }
+
   @include hover {
     opacity: 0.5;
   }
@@ -159,6 +164,18 @@
       left: 0;
       right: 0;
       background-color: rgba(0, 43, 102, 0.5);
+    }
+
+    .header__container {
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $color-alice-blue;
+        width: 90%;
+        right: 0;
+        height: 75px;
+        z-index: 1;
+      }
     }
 
     .header__logo {

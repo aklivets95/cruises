@@ -1959,6 +1959,73 @@ button,
   font-size: 14px;
 }
 
+.contacts__container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 120px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts__map {
+  display: block;
+}
+
+.contacts__wrapper {
+  max-width: 500px;
+}
+
+.contacts__wrapper p {
+  margin: 0 0 40px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #011c40;
+}
+
+.contacts__wrapper address svg {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.contacts__wrapper address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #011c40;
+  margin-bottom: 25px;
+}
+
+.contacts__phone-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 10px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #011c40;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -2203,6 +2270,22 @@ button,
   .booking__form-wrapper {
     margin: 0 auto;
   }
+
+  .contacts__container {
+    padding: 100px 45px;
+    gap: 30px;
+  }
+
+  .contacts__map {
+    width: 324px;
+    height: 335px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .contacts__wrapper address {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2267,6 +2350,7 @@ button,
     width: 24px;
     height: 12px;
     background-color: transparent;
+    z-index: 2;
   }
 
   .header__burger-button--open {
@@ -2292,6 +2376,7 @@ button,
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    overflow-y: scroll;
   }
 
   .header__navigation-list {
@@ -2330,6 +2415,16 @@ button,
     left: 0;
     right: 0;
     background-color: rgba(0, 43, 102, 0.5);
+  }
+
+  .is-open .header__container::after {
+    content: "";
+    position: absolute;
+    background-color: #f9fbfd;
+    width: 90%;
+    right: 0;
+    height: 75px;
+    z-index: 1;
   }
 
   .is-open .header__logo {
@@ -2511,6 +2606,20 @@ button,
   .form__checkbox label {
     line-height: 120%;
     padding: 0 0 0 28px;
+  }
+
+  .contacts__container {
+    padding: 65px 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .contacts__map {
+    height: 316px;
+    width: 100%;
   }
 }
 
