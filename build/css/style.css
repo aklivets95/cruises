@@ -1669,7 +1669,7 @@ button,
 }
 
 .cruises__item.focus-visible:focus {
-  outline: 2px solid #75B4F3;
+  outline: 2px solid #75b4f3;
 }
 
 .cruises__item.focus-visible:focus .cruises__item-background {
@@ -1777,7 +1777,7 @@ button,
 }
 
 .cruises__item-content-link.focus-visible:focus {
-  outline: 1px solid #75B4F3;
+  outline: 1px solid #75b4f3;
 }
 
 .booking {
