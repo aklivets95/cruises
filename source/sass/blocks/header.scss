@@ -63,11 +63,11 @@
     background-color: transparent;
     z-index: 2;
 
-    &--open {
+    &-open {
       display: flex;
     }
 
-    &--close {
+    &-close {
       display: none;
     }
   }
@@ -210,11 +210,11 @@
       height: 14px;
       z-index: 2;
 
-      &--open {
+      &-open {
         display: none;
       }
 
-      &--close {
+      &-close {
         display: flex;
       }
     }

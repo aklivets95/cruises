@@ -2401,13 +2401,13 @@ button,
     z-index: 2;
   }
 
-  .header__burger-button--open {
+  .header__burger-button-open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 
-  .header__burger-button--close {
+  .header__burger-button-close {
     display: none;
   }
 
@@ -2501,11 +2501,11 @@ button,
     z-index: 2;
   }
 
-  .is-open .header__burger-button--open {
+  .is-open .header__burger-button-open {
     display: none;
   }
 
-  .is-open .header__burger-button--close {
+  .is-open .header__burger-button-close {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
