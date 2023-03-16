@@ -10,14 +10,14 @@
   gap: 88px;
 
   @include vp-1023 {
-    padding: 100px 45px;
+    padding: 100px 45px 93px;
     gap: 30px;
     align-items: flex-start;
   }
 
   @include vp-767 {
     display: block;
-    padding: 65px 15px 85px;
+    padding: 66px 15px 85px;
   }
 }
 
@@ -40,20 +40,25 @@
 }
 
 .journey__container {
+  @include vp-1023 {
+    margin-top: -9px;
+  }
+
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
   }
 }
 
 .journey__container h2 {
-  margin: 0 0 40px;
+  margin: 0 0 23px;
 
   @include section-title-desktop;
 
   @include vp-1023 {
     @include section-title-tablet;
     max-width: 225px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    line-height: 140%;
   }
 
   @include vp-767 {

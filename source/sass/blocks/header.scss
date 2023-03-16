@@ -36,8 +36,20 @@
 
   @include vp-767 {
     padding: 0 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $color-alice-blue;
+      width: calc(100% - 36px);
+      right: 0;
+      height: 75px;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.2s ease;
     }
   }
+}
 
 .header__burger-button {
   display: none;
@@ -70,7 +82,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    width: 90%;
+    width: calc(100% - 36px);
     padding: 75px 30px 30px 15px;
     transition: all 0.3s ease;
     overflow-y: scroll;
@@ -129,9 +141,6 @@
 .header__logo {
   display: flex;
 
-  @include vp-767 {
-  }
-
   @include hover {
     opacity: 0.5;
   }
@@ -168,13 +177,7 @@
 
     .header__container {
       &::after {
-        content: "";
-        position: absolute;
-        background-color: $color-alice-blue;
-        width: 90%;
-        right: 0;
-        height: 75px;
-        z-index: 1;
+        opacity: 1;
       }
     }
 
@@ -182,7 +185,7 @@
       position: absolute;
       z-index: 2;
       top: 0;
-      left: 20%;
+      left: 51px;
     }
 
     .header__logo-image {
@@ -201,10 +204,10 @@
 
     .header__burger-button {
       position: absolute;
-      top: 0;
-      right: 15px;
-      width: 13px;
-      height: 13px;
+      top: 5px;
+      right: 14px;
+      width: 14px;
+      height: 14px;
       z-index: 2;
 
       &--open {

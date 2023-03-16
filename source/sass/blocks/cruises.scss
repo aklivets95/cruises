@@ -7,11 +7,11 @@
   padding: 85px 25px 120px;
 
   @include vp-1023 {
-    padding: 90px 60px;
+    padding: 90px 60px 99px;
   }
 
   @include vp-767 {
-    padding: 65px 25px;
+    padding: 57px 25px 65px;
   }
 }
 
@@ -27,7 +27,7 @@
 
   @include vp-767 {
     @include section-title-mobile;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -60,6 +60,10 @@
     }
   }
 
+  @include vp-1023 {
+    min-height: 386px;
+  }
+
   @include hover {
     .cruises__item-background {
       visibility: hidden;
@@ -68,6 +72,8 @@
   }
 
   @include focus {
+    outline: 2px solid #75b4f3;
+
     .cruises__item-background {
       visibility: hidden;
       opacity: 0;
@@ -95,8 +101,8 @@
 
 .cruises__item-background p {
   position: absolute;
-  bottom: 28px;
-  left: 36px;
+  bottom: 23px;
+  left: 30px;
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
@@ -104,11 +110,21 @@
   font-size: 18px;
   line-height: 150%;
   color: $color-alice-blue;
+
+  @include vp-1023 {
+    bottom: 28px;
+    left: 34px;
+  }
+
+  @include vp-767 {
+    bottom: 17px;
+    left: 25px;
+  }
 }
 
 .cruises__item-content {
   position: relative;
-  padding: 29px 25px 75px;
+  padding: 29px 25px 80px;
   height: 100%;
   background-color: $color-tangaroa;
 
@@ -117,11 +133,12 @@
   }
 
   @include vp-1023 {
-    padding: 29px 35px 101px;
+    padding: 29px 35px 80px;
   }
 
   @include vp-767 {
-    padding: 35px 25px 100px;
+    padding: 29px 24px 80px;
+    position: static;
   }
 }
 
@@ -190,5 +207,13 @@
   @include vp-767 {
     left: 25px;
     right: 25px;
+  }
+
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include focus {
+    outline: 1px solid #75b4f3;
   }
 }

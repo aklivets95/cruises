@@ -16,7 +16,7 @@
   }
 
   @include vp-767 {
-    padding: 65px 15px;
+    padding: 58px 15px 59px;
     flex-direction: column-reverse;
     gap: 40px;
   }
@@ -24,6 +24,9 @@
 
 .contacts__map {
   display: block;
+  width: 560px;
+  height: 306px;
+  border: none;
 
   @include vp-1023 {
     width: 324px;
@@ -42,13 +45,21 @@
 }
 
 .contacts__wrapper p {
-  margin: 0 0 40px;
+  margin: 0 0 31px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 150%;
   color: $color-tangaroa;
+
+  @include vp-1023 {
+    margin-bottom: 29px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+  }
 }
 
 .contacts__wrapper address svg {
@@ -68,7 +79,7 @@
   margin-bottom: 25px;
 
   @include vp-1023 {
-    margin-bottom: 30px;
+    margin-bottom: 21px;
   }
 }
 
@@ -81,4 +92,12 @@
   font-size: 16px;
   line-height: 150%;
   color: $color-tangaroa;
+
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include focus {
+    outline: 1px solid $color-tangaroa;
+  }
 }

@@ -437,6 +437,7 @@ html {
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -1476,13 +1477,13 @@ button,
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #011c40;
-  z-index: -1;
+  z-index: 0;
 }
 
 .promo__container {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 283px 10px 30px 198px;
+  padding: 274px 10px 30px 105px;
 }
 
 .promo__background-image {
@@ -1501,7 +1502,7 @@ button,
   font-size: 54px;
   line-height: 66px;
   color: #f9fbfd;
-  margin: 0 0 30px;
+  margin: 0 0 8px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -1535,7 +1536,7 @@ button,
 }
 
 .journey__container h2 {
-  margin: 0 0 40px;
+  margin: 0 0 23px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -1667,6 +1668,10 @@ button,
   opacity: 0;
 }
 
+.cruises__item.focus-visible:focus {
+  outline: 2px solid #75B4F3;
+}
+
 .cruises__item.focus-visible:focus .cruises__item-background {
   visibility: hidden;
   opacity: 0;
@@ -1695,8 +1700,8 @@ button,
 
 .cruises__item-background p {
   position: absolute;
-  bottom: 28px;
-  left: 36px;
+  bottom: 23px;
+  left: 30px;
   margin: 0;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
@@ -1708,7 +1713,7 @@ button,
 
 .cruises__item-content {
   position: relative;
-  padding: 29px 25px 75px;
+  padding: 29px 25px 80px;
   height: 100%;
   background-color: #011c40;
 }
@@ -1771,6 +1776,10 @@ button,
   text-align: center;
 }
 
+.cruises__item-content-link.focus-visible:focus {
+  outline: 1px solid #75B4F3;
+}
+
 .booking {
   position: relative;
   min-height: 555px;
@@ -1786,7 +1795,7 @@ button,
 }
 
 .booking__container {
-  max-width: 1180px;
+  max-width: 1160px;
   margin: 0 auto;
   padding: 50px 60px;
   display: -webkit-box;
@@ -1806,7 +1815,7 @@ button,
 }
 
 .booking__text-wrapper h2 {
-  margin: 0 0 30px;
+  margin: 0 0 21px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1828,12 +1837,12 @@ button,
 
 .booking__form-wrapper {
   background-color: #011c40;
-  padding: 50px;
+  padding: 45px 50px 50px;
   max-width: 403px;
 }
 
 .booking__form-wrapper p {
-  margin: 0 0 35px;
+  margin: 0 0 26px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -1890,20 +1899,16 @@ button,
   outline: 1px solid #f9fbfd;
 }
 
-.form__checkbox label.focus-visible:active {
-  opacity: 0.3;
-}
-
-.form__checkbox div {
+.form__checkbox-input {
   position: absolute;
   left: 0;
   top: 2px;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   background-color: #f9fbfd;
 }
 
-.form__checkbox div::after {
+.form__checkbox-input::after {
   content: "";
   position: absolute;
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 2.5L5.28571 7L11 1' stroke='%23101A56'/%3E%3C/svg%3E%0A");
@@ -1918,23 +1923,22 @@ button,
   transition: opacity 0.3s ease;
 }
 
-.form__checkbox input[type=checkbox]:checked + div::after {
+.form__checkbox input[type=checkbox]:checked + span::after {
   opacity: 1;
 }
 
 .form__checkbox {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   position: relative;
 }
 
-.form__checkbox input[type=checkbox]:focus + div {
+.form__checkbox input[type=checkbox]:focus + span {
   outline: 2px solid #b1d9fa;
-  opacity: 0.7;
 }
 
 .form__submit {
   width: 100%;
-  padding: 11px 5px 13px;
+  padding: 10px 5px 12px;
   border: none;
   cursor: pointer;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -1977,6 +1981,9 @@ button,
 
 .contacts__map {
   display: block;
+  width: 560px;
+  height: 306px;
+  border: none;
 }
 
 .contacts__wrapper {
@@ -1984,7 +1991,7 @@ button,
 }
 
 .contacts__wrapper p {
-  margin: 0 0 40px;
+  margin: 0 0 31px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -2024,6 +2031,10 @@ button,
   font-size: 16px;
   line-height: 150%;
   color: #011c40;
+}
+
+.contacts__phone-link.focus-visible:focus {
+  outline: 1px solid #011c40;
 }
 
 /* @mixin hover-focus {
@@ -2141,14 +2152,14 @@ button,
   }
 
   .promo__container {
-    padding: 280px 45px 30px;
+    padding: 275px 45px 30px;
   }
 
   .promo__container h2 {
     text-shadow: none;
     font-size: 50px;
     line-height: 50px;
-    margin: 0 0 29px;
+    margin: 0 0 16px;
   }
 
   .promo__container p {
@@ -2158,7 +2169,7 @@ button,
   }
 
   .journey {
-    padding: 100px 45px;
+    padding: 100px 45px 93px;
     gap: 30px;
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -2170,10 +2181,15 @@ button,
     height: auto;
   }
 
+  .journey__container {
+    margin-top: -9px;
+  }
+
   .journey__container h2 {
     font-size: 26px;
     max-width: 225px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    line-height: 140%;
   }
 
   .advantages {
@@ -2181,7 +2197,7 @@ button,
   }
 
   .advantages__container {
-    padding: 100px 45px;
+    padding: 90px 45px 100px;
   }
 
   .advantages__container h2 {
@@ -2216,8 +2232,12 @@ button,
     margin-bottom: 18px;
   }
 
+  .advantages__item h3 {
+    margin-bottom: 6px;
+  }
+
   .cruises__container {
-    padding: 90px 60px;
+    padding: 90px 60px 99px;
   }
 
   .cruises__container h2 {
@@ -2230,8 +2250,17 @@ button,
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .cruises__item {
+    min-height: 386px;
+  }
+
+  .cruises__item-background p {
+    bottom: 28px;
+    left: 34px;
+  }
+
   .cruises__item-content {
-    padding: 29px 35px 101px;
+    padding: 29px 35px 80px;
   }
 
   .cruises__item-content p {
@@ -2249,7 +2278,7 @@ button,
 
   .booking__container {
     display: block;
-    padding: 100px 45px;
+    padding: 95px 45px 100px;
   }
 
   .booking__text-wrapper {
@@ -2259,11 +2288,11 @@ button,
   .booking__text-wrapper h2 {
     text-align: center;
     font-size: 34px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .booking__text-wrapper p {
-    margin: 0 auto 60px;
+    margin: 0 auto 52px;
     text-align: center;
   }
 
@@ -2283,8 +2312,12 @@ button,
     flex-shrink: 0;
   }
 
+  .contacts__wrapper p {
+    margin-bottom: 29px;
+  }
+
   .contacts__wrapper address {
-    margin-bottom: 30px;
+    margin-bottom: 21px;
   }
 }
 
@@ -2319,8 +2352,8 @@ button,
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 28px;
+    margin-bottom: 29px;
   }
 
   .footer__navigation-list {
@@ -2328,6 +2361,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 16px;
   }
 
   .footer__logo-image {
@@ -2341,6 +2375,20 @@ button,
 
   .header__container {
     padding: 0 15px;
+  }
+
+  .header__container::after {
+    content: "";
+    position: absolute;
+    background-color: #f9fbfd;
+    width: calc(100% - 36px);
+    right: 0;
+    height: 75px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
   }
 
   .header__burger-button {
@@ -2371,7 +2419,7 @@ button,
     top: 0;
     bottom: 0;
     right: 0;
-    width: 90%;
+    width: calc(100% - 36px);
     padding: 75px 30px 30px 15px;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -2418,20 +2466,14 @@ button,
   }
 
   .is-open .header__container::after {
-    content: "";
-    position: absolute;
-    background-color: #f9fbfd;
-    width: 90%;
-    right: 0;
-    height: 75px;
-    z-index: 1;
+    opacity: 1;
   }
 
   .is-open .header__logo {
     position: absolute;
     z-index: 2;
     top: 0;
-    left: 20%;
+    left: 51px;
   }
 
   .is-open .header__logo-image {
@@ -2452,10 +2494,10 @@ button,
 
   .is-open .header__burger-button {
     position: absolute;
-    top: 0;
-    right: 15px;
-    width: 13px;
-    height: 13px;
+    top: 5px;
+    right: 14px;
+    width: 14px;
+    height: 14px;
     z-index: 2;
   }
 
@@ -2474,13 +2516,13 @@ button,
   }
 
   .promo__container {
-    padding: 185px 15px 15px;
+    padding: 176px 15px 15px;
   }
 
   .promo__container h2 {
     font-size: 36px;
     line-height: 125%;
-    margin: 0 0 25px;
+    margin: 0 0 11px;
   }
 
   .promo__container p {
@@ -2491,7 +2533,7 @@ button,
 
   .journey {
     display: block;
-    padding: 65px 15px 85px;
+    padding: 66px 15px 85px;
   }
 
   .journey__photo {
@@ -2502,7 +2544,7 @@ button,
   }
 
   .journey__container {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
   }
 
   .journey__container h2 {
@@ -2547,12 +2589,12 @@ button,
   }
 
   .cruises__container {
-    padding: 65px 25px;
+    padding: 57px 25px 65px;
   }
 
   .cruises__container h2 {
     font-size: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .cruises__list {
@@ -2565,8 +2607,14 @@ button,
     flex-direction: column;
   }
 
+  .cruises__item-background p {
+    bottom: 17px;
+    left: 25px;
+  }
+
   .cruises__item-content {
-    padding: 35px 25px 100px;
+    padding: 29px 24px 80px;
+    position: static;
   }
 
   .cruises__item-content-link {
@@ -2579,7 +2627,7 @@ button,
   }
 
   .booking__container {
-    padding: 65px 15px;
+    padding: 58px 15px 65px;
   }
 
   .booking__text-wrapper h2 {
@@ -2590,12 +2638,12 @@ button,
   .booking__text-wrapper p {
     font-size: 16px;
     line-height: 140%;
-    margin: 0 auto 40px;
+    margin: 0 auto 32px;
     max-width: 257px;
   }
 
   .booking__form-wrapper {
-    padding: 40px 30px;
+    padding: 36px 30px 40px;
   }
 
   .booking__form-wrapper p {
@@ -2608,8 +2656,12 @@ button,
     padding: 0 0 0 28px;
   }
 
+  .form__checkbox {
+    margin-bottom: 27px;
+  }
+
   .contacts__container {
-    padding: 65px 15px;
+    padding: 58px 15px 59px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
@@ -2620,6 +2672,10 @@ button,
   .contacts__map {
     height: 316px;
     width: 100%;
+  }
+
+  .contacts__wrapper p {
+    margin-bottom: 28px;
   }
 }
 
@@ -2724,11 +2780,19 @@ button,
     opacity: 0;
   }
 
+  .cruises__item-content-link:hover:not(.focus-visible) {
+    opacity: 0.5;
+  }
+
   .form__checkbox label:hover:not(.focus-visible) {
     opacity: 0.5;
   }
 
   .form__submit:hover:not(.focus-visible) {
+    opacity: 0.5;
+  }
+
+  .contacts__phone-link:hover:not(.focus-visible) {
     opacity: 0.5;
   }
 }
