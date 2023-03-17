@@ -16,7 +16,7 @@
   }
 
   @include vp-767 {
-    padding: 58px 15px 59px;
+    padding: 58px 15px 56px;
     flex-direction: column-reverse;
     gap: 40px;
   }
@@ -69,6 +69,7 @@
 
 .contacts__wrapper address {
   display: flex;
+  align-items: center;
   gap: 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
@@ -76,15 +77,17 @@
   font-size: 16px;
   line-height: 150%;
   color: $color-tangaroa;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 
   @include vp-1023 {
     margin-bottom: 21px;
+    align-items: flex-start;
   }
 }
 
 .contacts__phone-link {
   display: inline-flex;
+  align-items: center;
   gap: 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;

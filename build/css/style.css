@@ -1903,8 +1903,8 @@ button,
   position: absolute;
   left: 0;
   top: 2px;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: #f9fbfd;
 }
 
@@ -2010,6 +2010,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
@@ -2017,13 +2020,16 @@ button,
   font-size: 16px;
   line-height: 150%;
   color: #011c40;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 }
 
 .contacts__phone-link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 10px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
@@ -2123,7 +2129,7 @@ button,
   }
 
   .header {
-    top: 30px;
+    top: 29px;
   }
 
   .header__container {
@@ -2131,7 +2137,7 @@ button,
   }
 
   .header__navigation-list {
-    gap: 23px;
+    gap: 24px;
     max-width: 600px;
   }
 
@@ -2318,6 +2324,9 @@ button,
 
   .contacts__wrapper address {
     margin-bottom: 21px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 }
 
@@ -2656,12 +2665,17 @@ button,
     padding: 0 0 0 28px;
   }
 
+  .form__checkbox-input {
+    width: 20px;
+    height: 20px;
+  }
+
   .form__checkbox {
     margin-bottom: 27px;
   }
 
   .contacts__container {
-    padding: 58px 15px 59px;
+    padding: 58px 15px 56px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
