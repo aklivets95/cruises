@@ -46,6 +46,7 @@
   @include vp-767 {
     display: flex;
     flex-direction: column;
+    gap: 30px;
   }
 }
 
@@ -62,6 +63,11 @@
 
   @include vp-1023 {
     min-height: 386px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    aspect-ratio: 0.9;
   }
 
   @include hover {
@@ -124,20 +130,26 @@
 
 .cruises__item-content {
   position: relative;
-  padding: 29px 25px 80px;
+  padding: 29px 25px 35px;
   height: 100%;
+  max-height: 100%;
+  min-height: 386px;
   background-color: $color-tangaroa;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &:focus-within {
     z-index: 2;
   }
 
   @include vp-1023 {
-    padding: 29px 35px 80px;
+    padding: 29px 35px 35px;
   }
 
   @include vp-767 {
-    padding: 29px 24px 80px;
+    padding: 29px 24px 35px;
     position: static;
   }
 }
@@ -185,10 +197,8 @@
 }
 
 .cruises__item-content-link {
-  position: absolute;
-  bottom: 35px;
   display: block;
-  min-width: 210px;
+  width: 100%;
   background-color: $color-alice-blue;
   color: $color-tangaroa;
   font-family: "Montserrat", "Arial", sans-serif;

@@ -1713,9 +1713,22 @@ button,
 
 .cruises__item-content {
   position: relative;
-  padding: 29px 25px 80px;
+  padding: 29px 25px 35px;
   height: 100%;
+  max-height: 100%;
+  min-height: 386px;
   background-color: #011c40;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .cruises__item-content:focus-within {
@@ -1761,10 +1774,8 @@ button,
 }
 
 .cruises__item-content-link {
-  position: absolute;
-  bottom: 35px;
   display: block;
-  min-width: 210px;
+  width: 100%;
   background-color: #f9fbfd;
   color: #011c40;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -1947,6 +1958,7 @@ button,
   font-size: 14px;
   line-height: 150%;
   color: #011c40;
+  background-color: #f9fbfd;
 }
 
 .form__submit.focus-visible:focus {
@@ -2266,7 +2278,7 @@ button,
   }
 
   .cruises__item-content {
-    padding: 29px 35px 80px;
+    padding: 29px 35px 35px;
   }
 
   .cruises__item-content p {
@@ -2614,6 +2626,12 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    gap: 30px;
+  }
+
+  .cruises__item {
+    width: 100%;
+    aspect-ratio: 0.9;
   }
 
   .cruises__item-background p {
@@ -2622,7 +2640,7 @@ button,
   }
 
   .cruises__item-content {
-    padding: 29px 24px 80px;
+    padding: 29px 24px 35px;
     position: static;
   }
 
