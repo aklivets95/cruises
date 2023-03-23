@@ -1661,6 +1661,7 @@ button,
 .cruises__item {
   position: relative;
   background-color: #011c40;
+  max-height: 386px;
 }
 
 .cruises__item:hover .cruises__item-background {
@@ -2632,6 +2633,7 @@ button,
   .cruises__item {
     width: 100%;
     aspect-ratio: 0.9;
+    max-height: none;
   }
 
   .cruises__item-background p {
